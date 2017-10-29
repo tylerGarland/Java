@@ -22,20 +22,22 @@ public class Spherocylinder {
       setCylinderHeight(ch);
    }
    /**
-   *Gives value to label.
+   *@return returns true or false if the labelIn fits
+   *the cirumstances.
    */
    boolean setLabel(String labelIn) {
-      if (labelIn != labelIn.trim()) {
+      /*if (labelIn != labelIn.trim()) {
          return false;
-      }
+      }*/
    
       label = labelIn;
       
       return true;
    }
    /**
-   *Makes it where radius has a value and if its less
-   *than 0 it returns false.
+   *@return Makes it where radius has a value and if its less
+   *than 0 it returns false.\
+   *@param radiusIn to radius.
    */
    boolean setRadius(double radiusIn) {
       if (radiusIn < 0) {
@@ -45,8 +47,9 @@ public class Spherocylinder {
       return true;
    }
    /**
-   *Makes it where ch has a value and if it less than 0
+   *@return Makes it where ch has a value and if it less than 0
    *then it returns false.
+   *@param chIn to chIn
    */
    boolean setCylinderHeight(double chIn) {
       if (chIn < 0) {
@@ -56,7 +59,7 @@ public class Spherocylinder {
       return true;
    }
    /**
-   *Gives label a return value.
+   *@return Gives label a return value.
    */
    String getLabel() {
       return label;
@@ -84,12 +87,12 @@ public class Spherocylinder {
    */
    public String toString() {
       DecimalFormat fmt = new DecimalFormat("#,##0.0##");
-      String string = "Spherocylinder \"" + getLabel() + "\" with radius " 
+      String string = "\nSpherocylinder \"" + getLabel() + "\" with radius "
          + fmt.format(radius)
          + " and cylinder height " + fmt.format(cylinderHeight) + " has:\n\t"
          + "circumference = " + fmt.format(circumference()) + " units\n"
          + "\tsurface area = " + fmt.format(surfaceArea()) + " square units\n"
-         + "\tvolume = " + fmt.format(volume()) + " units";
+         + "\tvolume = " + fmt.format(volume()) + " cubic units";
    
       return string;
    }
