@@ -1,6 +1,7 @@
 import java.text.DecimalFormat;
-/** To set up a constructor.
-*To set up a
+/** Program to create a a spherocylinder.
+* @author:Tyler Garland
+*@version: 10/29/2017
  */
 public class Spherocylinder {
 /**
@@ -26,9 +27,9 @@ public class Spherocylinder {
    *the cirumstances.
    */
    boolean setLabel(String labelIn) {
-      /*if (labelIn != labelIn.trim()) {
+      if (labelIn != labelIn.trim()) {
          return false;
-      }*/
+      
    
       label = labelIn;
       
@@ -64,20 +65,34 @@ public class Spherocylinder {
    String getLabel() {
       return label;
    }
+   /**
+   *@return getRadius returns radius.
+   */
    double getRadius() {
       return radius; }
-      
+   /**
+   *@return getCylinderHeight returns cylinderHeight.
+   */
    double getCylinderHeight() {
       return cylinderHeight;
     
    }
+   /**
+   *@return out formula for cirumference.
+   */
    double circumference() {
       return 2 * Math.PI * radius;
    }
+   /**
+   *@return the formula for surface area.
+   */
    double surfaceArea() { 
       return circumference() * (2 * radius + cylinderHeight);
    
    }
+   /**
+   *@return the formula for volume.
+   */
    double volume() {
       return Math.PI * radius * radius * (4.0 / 3.0 * radius + cylinderHeight);
    }
@@ -87,7 +102,7 @@ public class Spherocylinder {
    */
    public String toString() {
       DecimalFormat fmt = new DecimalFormat("#,##0.0##");
-      String string = "\nSpherocylinder \"" + getLabel() + "\" with radius "
+      String string = "Spherocylinder \"" + getLabel() + "\" with radius "
          + fmt.format(radius)
          + " and cylinder height " + fmt.format(cylinderHeight) + " has:\n\t"
          + "circumference = " + fmt.format(circumference()) + " units\n"

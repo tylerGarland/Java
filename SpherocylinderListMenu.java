@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author: Tyler Garland
  * @version: 10/19/17
  */
-public class SpherocylinderListMenu {
+public class SpherocylinderListMenu2 {
 /**
 *prints out our menu.
 *@param args Standard arguments used.
